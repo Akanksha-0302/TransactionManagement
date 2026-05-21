@@ -15,7 +15,7 @@ public class InventoryHandler {
     }
 
     public Product getProductById(int id) {
-          System.out.println("here is changes from git");
+          
         Product product=productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found with id: " + id));
         return product;
     }
