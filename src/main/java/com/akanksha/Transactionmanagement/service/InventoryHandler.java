@@ -16,7 +16,7 @@ public class InventoryHandler {
 
     public Product getProductById(int id) {
 
-        System.out.println("Fetching product with id: " + id);
-        return productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found with id: " + id));
+        Product product=productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found with id: " + id));
+        return product;
     }
 }
